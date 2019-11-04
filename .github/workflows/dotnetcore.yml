@@ -13,7 +13,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.2.108
+    - name: Go to solution directory
+      run: cd xUnit-ill
     - name: Build with dotnet
-      run: cd xUnit-ill && dotnet build --configuration Release
+      run: dotnet build --configuration Release
     - name: Run tests
       run: dotnet test
