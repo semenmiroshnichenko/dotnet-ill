@@ -14,6 +14,6 @@ jobs:
       with:
         dotnet-version: 2.2.108
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: cd xUnit-ill && dotnet build --configuration Release
     - name: Run tests
       run: dotnet test
