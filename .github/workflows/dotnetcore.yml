@@ -16,6 +16,6 @@ jobs:
     - name: Build with dotnet
       working-directory: ./xUnit-ill
       run: dotnet build --configuration Release
-    - name: Run tests
-      working-directory: ./xUnit-ill
-      run: dotnet test
+#    - name: Run tests
+#      working-directory: ./xUnit-ill
+#      run: dotnet test
