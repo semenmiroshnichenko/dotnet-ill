@@ -10,8 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: dotnet build
-  displayName: 'Build this shit'
-- script: dotnet test
-  displayName: 'Test this shit'
+  - script: cd ./xUnit-ill
+    displayName: 'go to project'
+  - script: dotnet build
+    displayName: 'Build this shit'
+  - script: dotnet test
+    displayName: 'Test this shit'
 
