@@ -10,10 +10,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - script: cd ./xUnit-ill
-    displayName: 'go to project'
-  - script: dotnet build
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'build'
+      projects: '**/*.csproj'
     displayName: 'Build this shit'
-  - script: dotnet test
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'test'
+      projects: '**/*.csproj'
     displayName: 'Test this shit'
 
